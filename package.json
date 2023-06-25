@@ -1,0 +1,26 @@
+{
+  "name": "@vscode-code-blocks/core",
+  "version": "0.1.0",
+  "description": "Core functionality for the vscode code blocks extension",
+  "main": "index.node",
+  "scripts": {
+    "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
+    "build-debug": "npm run build --",
+    "build-release": "npm run build -- --release",
+    "install": "npm run build-release",
+    "test": "cargo test"
+  },
+  "author": "selfint",
+  "license": "MIT",
+  "devDependencies": {
+    "cargo-cp-artifact": "^0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selfint/code-blocks-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/selfint/code-blocks-core/issues"
+  },
+  "homepage": "https://github.com/selfint/code-blocks-core#readme"
+}
